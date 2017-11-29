@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const {
+  // layout controller
   layout,
 
+  // pages controllers
   mainController,
   musicController,
   bioController,
