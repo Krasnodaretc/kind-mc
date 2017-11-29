@@ -16,7 +16,7 @@ const {
 
 module.exports = function (app) {
     // USE layout : head, header, footer
-    app.use('/', layout );
+    app.use(['/', '/:url'], layout );
 
     // GET pages
     app.get('/music', musicController);
