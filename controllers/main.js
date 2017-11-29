@@ -1,5 +1,5 @@
 
 
 module.exports = function (req, res) {
-    console.log('main');
+    res.render('index', {title: 'Hui', data: req.layout });
 };
