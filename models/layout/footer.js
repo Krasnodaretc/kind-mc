@@ -1,4 +1,8 @@
-
+const author = {
+    name: 'Krasnodaretc',
+    link: '',
+    copyright: '2017',
+};
 
 module.exports = async function (urlPart) {
     let menu = await db.collection('main')
@@ -8,7 +12,6 @@ module.exports = async function (urlPart) {
             }
         );
 
-    // set active link
     menu.value.forEach(link => {
         link.active = link.url === urlPart;
     });

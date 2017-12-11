@@ -1,17 +1,13 @@
 const menu = require('./menu');
+const footer = require('./footer');
 
-module.exports = function (url) {
+module.exports = async function (url) {
     let res = {
-        menu: menu(url)
+        menu: await menu(url)
     };
 
-    res.header = false;
-
     res.footer = {
-        author: {
-            name: 'Krasnodaretc',
-            link: ''
-        },
+        author: ,
         copyright: '2017'
     };
 
