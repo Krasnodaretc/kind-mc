@@ -5,12 +5,13 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
-<header>
-    <%partial('./components/header/header')%>
+<header class="header">
+    <%-partial('./components/header/header', {menu: data.layout.menu})%>
 </header>
+<%console.log(data)%>
     <%-body -%>
-<footer>
-    <%partial('./components/footer/footer')%>
+<footer class="footer">
+    <%-partial('./components/footer/footer', {footer: data.layout.footer})%>
 </footer>
 </body>
 </html>
