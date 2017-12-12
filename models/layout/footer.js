@@ -16,5 +16,8 @@ module.exports = async function (urlPart) {
         link.active = link.url === urlPart;
     });
 
-    return menu.value;
+    return {
+        menu: menu.value,
+        author: author
+    };
 };
