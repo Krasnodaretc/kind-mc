@@ -14,6 +14,14 @@
     "express": "~4.15.5",
     "mongodb": "^2.2.33",
     "morgan": "~1.9.0",
+    "normalize.css": "^7.0.0",
     "serve-favicon": "~2.4.5"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-sass": "^3.1.0"
   }
 }
