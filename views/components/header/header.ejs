@@ -1,15 +1,19 @@
 <%console.log(menu)%>
-<div class="logo">
-    <div class="logo__wrap"><img src="" alt="" class="logo__img"></div>
-</div>
-<ul class="header__menu menu">
+<div class="container">
+    <div class="logo">
+        <div class="logo__wrap">
+            <img src="" alt="" class="logo__img">
+        </div>
+    </div>
+    <ul class="menu menu--header">
 
-    <%menu.forEach(link=>{%>
-        <li class="menu__li">
-            <a href="/<%=link.url%>" class="menu__link <%=link.active ? 'active' : ''%>">
+        <%menu.forEach(link=>{%>
+        <li class="menu__li  <%=link.active ? 'active' : ''%>">
+            <a href="/<%=link.url%>" class="menu__link">
                 <%=link.title%>
             </a>
         </li>
-    <%});%>
+        <%});%>
 
-</ul>
+    </ul>
+</div>
