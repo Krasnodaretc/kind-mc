@@ -9,7 +9,6 @@ module.exports = async function (urlPart) {
         );
 
     // set active link
-    console.info(menu, urlPart);
     menu.value.forEach(link => {
         link.active = link.url === urlPart;
     });
