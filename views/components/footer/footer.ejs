@@ -1,5 +1,19 @@
-<div class="container">
-    <div class="copyright">
-        <%console.warn(footer)%>
+<div class="footer__content">
+    <div class="footer__contact">
+        <div class="footer__h3 h3">
+
+        </div>
+
+        <div class="footer__field">
+            Email: <%=footer.contact.emails.join(', ')%>
+        </div>
+        <div class="footer__field">
+            Телефон: <%=footer.contact.tels.join(', ')%>
+        </div>
+        <div class="footer__field">
+            Адрес: <%=footer.contact.address%>
+        </div>
     </div>
+    <div class="menu menu--footer"></div>
 </div>
+<div class="footer__copyright"></div>

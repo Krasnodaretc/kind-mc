@@ -4,6 +4,17 @@ body, html{
   padding: 0px;
   font-family: 'Roboto', sans-serif;
 }
+
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .footer{
+    margin-top: auto;
+  }
+}
+
 .container{
   max-width: 1199px;
   padding: 10px 20px;
@@ -16,5 +27,5 @@ body, html{
 
 
 .footer{
-
+  background-color: #e57373;
 }
