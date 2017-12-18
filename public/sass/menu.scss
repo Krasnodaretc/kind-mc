@@ -23,23 +23,25 @@
     #{$this}__li{
       display: block;
       width: 20%;
-      transition: opacity 0.3s ease-in-out, border-color 0.5s ease-in-out;
+      color: #000;
+      transition: opacity 0.3s ease-in-out, color 0.5s ease-in-out, border-color 0.5s ease-in-out;
       border-bottom: 1px solid #000;
 
       &.active{
-        background-color: $backgroundContent;
-        border-bottom-color: transparent;
+        color: #b71c1c;
+        border-bottom-color: #b71c1c;
       }
 
       &:hover{
         opacity: 0.5;
-        border-bottom-color: transparent;
+        color: #b71c1c;
+        border-bottom-color: #b71c1c;
       }
     }
 
     #{$this}__link{
       display: block;
-      color: #000;
+      color: inherit;
       padding: 30px 20px;
       text-align: center;
     }
