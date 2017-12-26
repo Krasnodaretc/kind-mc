@@ -21,21 +21,20 @@
     justify-content: space-around;
 
     #{$this}__li{
-      display: block;
       width: 20%;
       color: #000;
       transition: opacity 0.3s ease-in-out, color 0.5s ease-in-out, border-color 0.5s ease-in-out;
       border-bottom: 1px solid #000;
 
       &.active{
-        color: #b71c1c;
-        border-bottom-color: #b71c1c;
+        color: $red;
+        border-bottom-color: $red;
       }
 
       &:hover{
         opacity: 0.5;
-        color: #b71c1c;
-        border-bottom-color: #b71c1c;
+        color: $red;
+        border-bottom-color: $red;
       }
     }
 
@@ -44,6 +43,29 @@
       color: inherit;
       padding: 30px 20px;
       text-align: center;
+    }
+  }
+
+
+  &--footer{
+    flex-direction: column;
+    justify-content: space-between;
+
+    #{$this}__li{
+      margin-bottom: 10px;
+    }
+
+    #{$this}__link{
+      color: #fff;
+      font-size: 18px;
+      padding: 5px;
+      border-radius: 2px;
+      transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+      &:hover{
+        background-color: #fff;
+        color: $red;
+      }
     }
   }
 }

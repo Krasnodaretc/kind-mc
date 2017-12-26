@@ -1,19 +1,32 @@
-<div class="footer__content">
-    <div class="footer__contact">
+<div class="footer__content container">
+    <div class="footer__col">
         <div class="footer__h3 h3">
-
+            Контактные данные
         </div>
 
         <div class="footer__field">
-            Email: <%=footer.contact.emails.join(', ')%>
+            <span>Email:</span><span><%=footer.contact.emails.join(', ')%></span>
         </div>
         <div class="footer__field">
-            Телефон: <%=footer.contact.tels.join(', ')%>
+            <span>Телефон:</span><span><%=footer.contact.tels.join(', ')%></span>
         </div>
         <div class="footer__field">
-            Адрес: <%=footer.contact.address%>
+            <span>Адрес:</span><span><%=footer.contact.address%></span>
         </div>
     </div>
-    <div class="menu menu--footer"></div>
+
+    <div class="menu menu--footer footer__col">
+        <div class="footer__h3 h3">
+            Меню
+        </div>
+        <%footer.menu.forEach(link=>{%>
+            <li class="menu__li  <%=link.active ? 'active' : ''%>">
+                <a href="/<%=link.url%>" class="menu__link">
+                    <%=link.title%>
+                </a>
+            </li>
+        <%});%>
+    </div>
+
 </div>
 <div class="footer__copyright"></div>
