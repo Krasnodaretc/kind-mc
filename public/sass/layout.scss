@@ -28,3 +28,34 @@ body{
 .h3{
   font-size: 22px;
 }
+
+
+.svg{
+  width: 40px;
+  height: 40px;
+
+  .colored{
+    fill: #fff;
+  }
+
+
+  &--to-top{
+    position: fixed;
+    bottom: 5vh;
+    right: 5vw;
+    width: 70px;
+    height: 70px;
+    .colored{
+      fill-rule: evenodd;
+      fill: rgba(0,0,0,0.2);
+      transition: fill 0.2s ease-in;
+    }
+
+    &:hover{
+      cursor: pointer;
+      .colored{
+        fill: $playerActions;
+      }
+    }
+  }
+}

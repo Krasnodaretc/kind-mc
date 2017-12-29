@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><%= title %></title>
+    <title><%= 'Kind MC' %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&amp;subset=cyrillic" rel="stylesheet">
     <link rel='stylesheet' href='/build/css/main.css' />
 </head>
@@ -11,6 +12,7 @@
 </header>
 <%/*console.log(data)*/%>
     <%-body -%>
+    <%-partial('../public/svg/toTopArrow')%>
 <footer class="footer">
     <%-partial('./components/footer/footer', {footer: data.layout.footer})%>
 </footer>

@@ -1,3 +1,38 @@
 <% layout('../../layout') -%>
-<h1><%= title %></h1>
-<p>Welcome to music</p>
+
+<main class="music">
+    <section class="container">
+        <h2 class="h2--section h2">Список треков:</h2>
+    </section>
+    <section class="music__list">
+
+        <%data.data.forEach( track => {%>
+        <div class="track__wrap">
+
+            <div class="track">
+                <img class="track__cover" src="/images/track/<%=track.image.url%>">
+                <div class="track__info">
+                    <%if (track.image.autor) {%>
+                        <p class="track__text">
+                            <%=`Обложка - ${track.image.autor}`%>
+                        </p>
+                    <%}%>
+                </div>
+                <div class="track__player player">
+                    <%-partial('../../../public/svg/audio/replay')%>
+                    <div class="player__action">
+                        <%-partial('../../../public/svg/audio/play', {active: true})%>
+                        <%-partial('../../../public/svg/audio/pause', {active: true})%>
+                    </div>
+                    <%-partial('../../../public/svg/audio/download')%>
+                </div>
+            </div>
+
+            <div class="track__signature">
+                <%=`${track.authors} - ${track.title}`%>
+            </div>
+        </div>
+        <%})%>
+
+    </section>
+</main>
