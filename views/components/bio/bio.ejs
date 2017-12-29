@@ -1,3 +1,46 @@
 <% layout('../../layout') -%>
-<h1><%= title %></h1>
-<p>Welcome to bio</p>
+<main class="bio">
+    <%console.log(data)%>
+    <h2 class="h2 h2--main">
+        <%=data.data.title%>
+    </h2>
+    <div class="container bio__wrap">
+        <aside class="bio__aside aside">
+            <header class="aside__head">
+                Kind MC
+            </header>
+            <div class="aside__photo">
+                <img src="/images/photo/<%=data.data.image%>" alt="kind mc" class="">
+            </div>
+            <div class="aside__info">
+
+                <p class="aside__text">
+                    Владимир Нефёдов
+                </p>
+                <a href="https://vk.com/kind_mc" class="aside__link">
+                    Official Group
+                </a>
+            </div>
+        </aside>
+        <div class="bio__content">
+            <section class="bio__lifestory">
+                <h2 class="h2 h2--section">
+                    <%=data.data.subTitle%>
+                </h2>
+                <div class="bio__text">
+                    <%=data.data.text%>
+                </div>
+            </section>
+            <section class="bio__tracks">
+                <h2 class="h2 h2--section">
+                    Трекография
+                </h2>
+            </section>
+            <section class="bio__contacts">
+                <h2 class="h2--section">
+                    Хотите со мной связаться?
+                </h2>
+            </section>
+        </div>
+    </div>
+</main>
