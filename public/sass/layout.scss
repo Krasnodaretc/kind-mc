@@ -58,4 +58,22 @@ body{
       }
     }
   }
+
+  &--star{
+    height: 25px;
+    width: 25px;
+
+    .colored{
+      fill: $red;
+    }
+  }
+
+  &--play{
+    width: 60px;
+    height: 60px;
+
+    .colored{
+      fill: $playerActions;
+    }
+  }
 }

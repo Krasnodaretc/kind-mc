@@ -1,3 +1,31 @@
 <% layout('../../layout') -%>
-<h1><%= title %></h1>
-<p>Welcome to text</p>
+<main class="words container">
+    <h2 class="h2 h2--section">
+        Здесь вы можете ознакомиться с текстами песен:
+    </h2>
+    <div class="words__list">
+        <%console.log(data)%>
+
+        <%data.data.forEach(track => {%>
+            <div class="words__item track-words">
+                <div class="track-words__cover">
+                    <img src="/images/track/<%=track.image.url%>" alt="">
+                </div>
+                <div class="track-words__info">
+                    <%=`${track.authors} - ${track.title}`%>
+                </div>
+                <div class="track-words__stars">
+                    <%-partial('../../../public/svg/stars/star-filled')%>
+                    <%-partial('../../../public/svg/stars/star-filled')%>
+                    <%-partial('../../../public/svg/stars/star-half')%>
+                    <%-partial('../../../public/svg/stars/star-null')%>
+                    <%-partial('../../../public/svg/stars/star-null')%>
+                </div>
+                <div class="track-words__play">
+                    <%-partial('../../../public/svg/audio/play-border', {active: true})%>
+                </div>
+            </div>
+        <%})%>
+
+    </div>
+</main>

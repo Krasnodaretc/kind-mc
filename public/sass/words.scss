@@ -1,0 +1,68 @@
+.words{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 100px;
+
+  &>.h2{
+    text-align: center;
+  }
+
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.track-words{
+  width: 44%;
+  padding: 15px 20px 15px 25px;
+  border: 1px solid $backgroundColor;
+  transition: background-color 0.3s ease-in;
+
+  // Убираем наложение рамок
+  &:nth-child(even){
+    transform: translateX(-1px);
+  }
+  &:nth-child(n + 3){
+    transform: translateY(-1px);
+  }
+
+  &:nth-child(even):nth-child(n + 3){
+    transform: translate(-1px, -1px);
+  }
+
+  &__cover{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+
+    img{
+      height: 100%;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__info{
+    font-size: 18px;
+    padding: 0 10px;
+  }
+
+  &__stars{
+    display: flex;
+    padding: 0 5px;
+  }
+
+
+  &:hover{
+    background-color: $backgroundColor;
+    cursor: pointer;
+  }
+}

@@ -27,16 +27,21 @@
     margin-bottom: 10px;
     padding: 5px;
     border-radius: 2px;
-    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
-    span:first-child{
-      margin-right: 10px;
+    span{
+      padding: 2px 4px;
+      transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+      &:first-child{
+        margin-right: 10px;
+      }
     }
 
     &:hover{
-      background-color: #fff;
-      color: $red;
       cursor: pointer;
+      &>span:nth-child(2){
+        background-color: #fff;
+        color: $bgFooter;
+      }
     }
   }
 }
