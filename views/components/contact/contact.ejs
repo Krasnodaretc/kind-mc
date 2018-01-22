@@ -1,3 +1,24 @@
 <% layout('../../layout') -%>
-<h1><%= title %></h1>
-<p>Welcome to contact</p>
+<section class="contact">
+    <%console.log(data)%>
+    <div class="container">
+        <h2 class="h2 h2--section contact__h2">
+            Контакты Kind MC
+        </h2>
+        <div class="contact__text">
+            По вопросам, связанным с организацией концертов, а также по вопросам рекламы и сотрудничества, Вы можете связаться со мной следующими способами:
+        </div>
+        <div class="contact__case">
+            <span class="contact__colored">По телефону: </span>
+            <span><%=data.data.tels.join(', ')%></span>
+        </div>
+        <div class="contact__case">
+            <span class="contact__colored">Через email: </span>
+            <span><%=data.data.emails.join(', ')%></span>
+        </div>
+        <div class="contact__case">
+            <span class="contact__colored">Через "Вконтакте": </span>
+            <a href="https://vk.com/kind_mc">kind mc</a>
+        </div>
+    </div>
+</section>

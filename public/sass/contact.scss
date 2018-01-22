@@ -1,0 +1,22 @@
+$text-width: 80%;
+
+.contact{
+  padding-bottom: 4vw;
+  &__h2{
+    text-align: center;
+  }
+
+  &__text{
+    max-width: $text-width;
+    margin: 0 auto;
+  }
+
+  &__case{
+    max-width: $text-width;
+    margin: 20px auto 0px auto;
+  }
+
+  &__colored{
+    color: $text-color;
+  }
+}
