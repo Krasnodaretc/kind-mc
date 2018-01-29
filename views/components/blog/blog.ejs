@@ -1,3 +1,16 @@
 <% layout('../../layout') -%>
-<h1><%= title %></h1>
-<p>Welcome to vlog-blog</p>
+<section class="blog">
+    <div class="container">
+
+        <%data.data.forEach(post => {%>
+        <div class="blog__post post">
+            <div class="post__video"></div>
+            <div class="post__description">
+                <div class="post__header"><%=post.name%></div>
+                <div class="post__text"><%=post.description%></div>
+            </div>
+        </div>
+        <%})%>
+
+    </div>
+</section>

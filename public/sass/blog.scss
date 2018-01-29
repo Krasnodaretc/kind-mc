@@ -1,0 +1,45 @@
+.blog{
+  padding-bottom: 4vw;
+  &__post{
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.post{
+  display: flex;
+  margin-top: 3vw;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid $backgroundColor;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &__video{
+    width: 50%;
+    height: 500px;
+    background-color: $backgroundColor;
+  }
+
+  &__description{
+    width: 45%;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header{
+    font-size: 22px;
+    padding: 20px;
+    border-bottom: 1px solid $playerActions;
+  }
+
+  &__text{
+    margin-top: 20px;
+  }
+
+
+  &:hover{
+    box-shadow: 0px 0px 30px -9px $bgFooter;
+    cursor: pointer;
+  }
+}
