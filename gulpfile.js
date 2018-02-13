@@ -3,6 +3,7 @@ const cssnano = require('gulp-cssnano');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
+const babel = require('gulp-babel');
 
 gulp.task('sass--custom', function () {
    gulp.src('./public/sass/main.scss')
@@ -21,10 +22,19 @@ gulp.task('css--vendors', function () {
         .pipe(gulp.dest('./public/build/css/'))
 });
 
+gulp.task('js', function () {
+    gulp.src('public/js/app.js')
+        .pipe(babel({
+            presets: ['env'],
+            plugins: ['transform-runtime'],
+            minified: true,
+        }))
+        .pipe(gulp.dest('public/build'))
+});
 
 gulp.task('watch', function () {
     gulp.watch('./public/sass/**/*.scss', ['sass--custom']);
-    gulp.watch('./public/javascripts/**/*.js', []);
+    gulp.watch('./public/js/**/*.js', ['js']);
 });
 
 
