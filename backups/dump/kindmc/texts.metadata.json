@@ -1,1 +1,0 @@
-{"options":{"autoIndexId":true},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"kindmc.texts"},{"v":2,"key":{"track":1},"name":"track_1","ns":"kindmc.texts"}]}
