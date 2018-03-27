@@ -9,6 +9,8 @@ const routes = require('./routes');
 
 var app = express();
 
+global.projectPath = __dirname;
+
 // view engine setup
 app.engine('ejs', require('ejs-locals'));
 app.set('views', path.join(__dirname, 'views'));

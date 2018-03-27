@@ -8,9 +8,10 @@ module.exports = async function (url) {
                 name: 'seo'
             }
         );
+
     return {
         menu: await menu(url),
         footer: await footer(url),
-        staticData: staticData.value,
+        staticData: staticData ? staticData.value : {},
     };
 };

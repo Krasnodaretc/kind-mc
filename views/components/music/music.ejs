@@ -10,6 +10,9 @@
         <div class="track__wrap">
 
             <div class="track">
+                <audio controls>
+                    <source src="/public/music/<%=track.track%>" type="audio/mpeg">
+                </audio>
                 <img class="track__cover" src="/images/track/<%=track.image.url%>">
                 <div class="track__info">
                     <%if (track.image.autor) {%>

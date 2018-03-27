@@ -10,7 +10,8 @@ const {
   bioController,
   blogController,
   textsController,
-  contactsController
+  contactsController,
+  staticController,
 } = require('../controllers');
 
 
@@ -31,4 +32,7 @@ module.exports = function (app) {
 
     /* GET home page. */
     app.get('/', mainController );
+
+    /* GET files */
+    app.get(['/public/:filename', '/public/:pathname/:filename'], staticController)
 };
