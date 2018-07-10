@@ -4,6 +4,7 @@ const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const babel = require('gulp-babel');
+const rollup = require('gulp-rollup');
 
 gulp.task('sass--custom', function () {
    gulp.src('./public/sass/main.scss')
@@ -24,10 +25,15 @@ gulp.task('css--vendors', function () {
 
 gulp.task('js', function () {
     gulp.src('public/js/app.js')
-        .pipe(babel({
-            presets: ['env'],
-            plugins: ['transform-runtime'],
-            minified: true,
+        .pipe(rollup({
+            "plugins": [
+                require("rollup-plugin-babel")({
+                    "presets": ['env', {'modules': false}],
+                    "plugins": ['transform-runtime'],
+                    minified: true,
+                })
+            ],
+            input: './public/js/app.js',
         }))
         .pipe(gulp.dest('public/build'))
 });
@@ -40,4 +46,6 @@ gulp.task('watch', function () {
 
 gulp.task('build::style', ['sass--custom', 'css--vendors']);
 
-gulp.task('default', ['build::style', 'watch']);
+gulp.task('build::js', ['js']);
+
+gulp.task('default', ['build::style', 'build::js', 'watch']);

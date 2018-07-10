@@ -20,5 +20,6 @@ module.exports = {
     bioController: require('./bio'),
     blogController: require('./blog'),
     textsController: require('./texts'),
-    contactsController: require('./contacts')
+    contactsController: require('./contacts'),
+    staticController: require('./static'),
 };
