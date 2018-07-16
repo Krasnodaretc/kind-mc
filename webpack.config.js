@@ -7,13 +7,12 @@ module.exports = {
         path: path.resolve(__dirname, 'public/build')
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
                 exclude: /(node_modules|bower_components)/,
-                loader: 'babel-loader',
-                query: {
-                    presets: ['es2015']
+                use: {
+                    loader: 'babel-loader',
                 }
             }
         ]

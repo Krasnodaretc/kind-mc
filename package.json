@@ -10,6 +10,7 @@
     "webpack": "npm run build && npm run watch"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "babel-runtime": "^6.26.0",
     "body-parser": "~1.18.2",
     "cookie-parser": "~1.4.3",
@@ -26,10 +27,12 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
+    "babel-eslint": "^8.0.1",
     "babel-loader": "^7.1.5",
     "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
@@ -40,6 +43,7 @@
     "gulp-sass": "^3.1.0",
     "rollup-plugin-babel": "^3.0.3",
     "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8",
     "webpack-stream": "^4.0.3"
   }
 }
