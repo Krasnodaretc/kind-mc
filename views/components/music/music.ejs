@@ -22,12 +22,20 @@
                     <%}%>
                 </div>
                 <div class="track__player player">
-                    <%-partial('../../../public/svg/audio/replay')%>
-                    <div class="player__action">
-                        <%-partial('../../../public/svg/audio/play', {active: true})%>
-                        <%-partial('../../../public/svg/audio/pause', {active: false})%>
+                    <div class="player__replay">
+                        <%-partial('../../../public/svg/audio/replay')%>
                     </div>
-                    <%-partial('../../../public/svg/audio/download')%>
+                    <div class="player__action">
+                        <div class="player__play">
+                            <%-partial('../../../public/svg/audio/play', {active: true})%>
+                        </div>
+                        <div class="player__pause">
+                            <%-partial('../../../public/svg/audio/pause', {active: false})%>
+                        </div>
+                    </div>
+                    <div class="player__download">
+                        <%-partial('../../../public/svg/audio/download')%>
+                    </div>
                 </div>
             </div>
 

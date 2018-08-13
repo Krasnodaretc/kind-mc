@@ -6,9 +6,8 @@ $(document).ready(() => {
 
     players.forEach(item => {
         const playerContainer = item.querySelector('.audio');
-        const playerControlsContainer = item.querySelector('.controls');
+        const playerControlsContainer = item.querySelector('.track__player');
 
-        const audioPlayer = new Player(playerContainer, playerControlsContainer);
-        debugger;
+        const audioPlayer = new Player(playerContainer, playerControlsContainer, '.player');
     });
 });

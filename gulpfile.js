@@ -40,7 +40,6 @@ gulp.task('js', function () {
 
 gulp.task('watch', function () {
     gulp.watch('./public/sass/**/*.scss', ['sass--custom']);
-    gulp.watch('./public/js/**/*.js', ['js']);
 });
 
 
@@ -48,4 +47,4 @@ gulp.task('build::style', ['sass--custom', 'css--vendors']);
 
 gulp.task('build::js', ['js']);
 
-gulp.task('default', ['build::style', 'build::js', 'watch']);
+gulp.task('default', ['build::style', 'watch']);
