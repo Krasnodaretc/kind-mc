@@ -20,8 +20,10 @@ const openDownloadableLink = (link) => {
 class Player {
     constructor(playerContainer, controlsContainer, BEMEelementName) {
         this.playerContainer = playerContainer;
+        this.audio = new Audio(playerContainer.querySelector('source').getAttribute('src'));
         this.controlsContainer = controlsContainer;
         this.BEMElementName = BEMEelementName;
+        this.title = this.playerContainer.dataset.title;
 
         this.play.bind(this);
         this.pause.bind(this);
@@ -36,18 +38,19 @@ class Player {
     }
 
     play() {
-        this.playerContainer.play();
+        console.info(this);
+        this.audio.play();
     };
 
     pause() {
-        this.playerContainer.pause();
+        this.audio.pause();
     }
 
     download() {
         const source = this.playerContainer.querySelector('source');
         const url = source.getAttribute('src');
 
-        const link = createLink('fileName lol', '_blank', url);
+        const link = createLink(`${this.title}`, '_blank', url);
         openDownloadableLink(link);
     };
 
@@ -58,7 +61,7 @@ class Player {
 
     stop() {
         this.pause();
-        this.playerContainer.currentTime = 0.0;
+        this.audio.currentTime = 0.0;
     };
 
     handleClick(el, handler) {
@@ -73,19 +76,19 @@ class Player {
         const controlsWithRoles = [
             {
                 control: this.getControlElementByName('play'),
-                handler: this.play,
+                handler: this.play.bind(this),
             },
             {
                 control: this.getControlElementByName('pause'),
-                handler: this.pause,
+                handler: this.pause.bind(this),
             },
             {
                 control: this.getControlElementByName('download'),
-                handler: this.download,
+                handler: this.download.bind(this),
             },
             {
                 control: this.getControlElementByName('replay'),
-                handler: this.replay,
+                handler: this.replay.bind(this),
             },
         ];
 
@@ -95,7 +98,7 @@ class Player {
     };
 
     getControlElementByName(name) {
-        document.querySelector(`${this.BEMElementName}__${name}`);
+        return this.controlsContainer.querySelector(`${this.BEMElementName}__${name}`);
     }
 }
 

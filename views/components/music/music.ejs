@@ -6,11 +6,11 @@
     </section>
     <section class="music__list">
 
-        <%data.data.forEach( track => {%>
+        <%data.data.forEach((track, index) => {%>
         <div class="track__wrap">
 
             <div class="track">
-                <audio class="hidden audio">
+                <audio class="hidden audio index-<%=index%>" data-title="<%=`${track.authors} - ${track.title}`%>">
                     <source src="/public/music/<%=track.track%>" type="audio/mpeg">
                 </audio>
                 <img class="track__cover" src="/images/track/<%=track.image.url%>">
