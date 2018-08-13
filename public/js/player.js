@@ -38,7 +38,6 @@ class Player {
     }
 
     play() {
-        console.info(this);
         this.audio.play();
     };
 
